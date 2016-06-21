@@ -12,10 +12,9 @@ server.connection({
 // Add the route
 server.route({
     method: 'GET',
-    path:'/hello', 
+    path:'/', 
     handler: function (request, reply) {
-
-        return reply('Hello World!');
+        return reply('Hello World!').header('Connection', 'close');
     }
 });
 
