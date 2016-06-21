@@ -1,6 +1,7 @@
 var restify = require('restify');
 
 function respond(req, res, next) {
+	res.set('Connection', 'close');
   res.send('Hello World!');
   next();
 }

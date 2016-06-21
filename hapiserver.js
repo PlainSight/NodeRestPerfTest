@@ -14,8 +14,7 @@ server.route({
     method: 'GET',
     path:'/hello', 
     handler: function (request, reply) {
-
-        return reply('Hello World!');
+        return reply('Hello World!').header('Connection', 'close');
     }
 });
 
