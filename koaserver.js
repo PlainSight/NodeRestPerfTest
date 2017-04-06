@@ -1,9 +1,9 @@
-var koa = require('koa');
-var app = koa();
+const Koa = require('koa');
+const app = new Koa();
 
-app.use(function *(){
-	this.set('Connection', 'close');
-  this.body = 'Hello World!';
+app.use(ctx => {
+	ctx.set('Connection', 'close');
+  ctx.body = 'Hello World';
 });
 
 app.listen(8000);
